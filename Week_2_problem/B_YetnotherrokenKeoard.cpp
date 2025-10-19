@@ -120,10 +120,9 @@ int main()
         vector<pair<int,char> > all = upper;
         all.insert(all.end(), lower.begin(), lower.end());
 
-        // Sort by original index
+     
         sort(all.begin(), all.end());
 
-        // Output
         for (pair<int,char> p : all) cout << p.second;
         cout << '\n';
     }

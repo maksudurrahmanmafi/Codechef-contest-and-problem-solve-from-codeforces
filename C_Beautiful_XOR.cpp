@@ -32,12 +32,12 @@ int main()
             else
             {
 
-                long long x1 = 1;
-                while ((x1 << 1) <= a)
-                    x1 <<= 1;
-                long long x2 = (a ^ x1) ^ b;
+                long long c = 1;
+                while ((c << 1) <= a)
+                    c <<= 1;
+                long long d = (a ^ c) ^ b;
                 cout << 2 << "\n"
-                     << x1 << " " << x2 << "\n";
+                     << c << " " << d << "\n";
             }
         }
     }
@@ -70,13 +70,13 @@ int main()
 //             }
 //         } else { // a > b
 //             // choose largest power of 2 ≤ a
-//             long long x1 = 1LL;
-//             while((x1 << 1) <= a) x1 <<= 1;
+//             long long c = 1LL;
+//             while((c << 1) <= a) c <<= 1;
 
-//             long long new_a = a ^ x1;
-//             long long x2 = new_a ^ b;
+//             long long new_a = a ^ c;
+//             long long d = new_a ^ b;
 
-//             cout << 2 << "\n" << x1 << " " << x2 << "\n";
+//             cout << 2 << "\n" << c << " " << d << "\n";
 //         }
 //     }
 //     return 0;

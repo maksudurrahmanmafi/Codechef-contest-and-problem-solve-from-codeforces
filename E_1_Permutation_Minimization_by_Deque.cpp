@@ -12,19 +12,19 @@ int main()
     {
         int n;
         cin >> n;
-        vector<int> p(n);
+        vector<int> v(n);
         for (int i = 0; i < n; i++)
-            cin >> p[i];
+            cin >> v[i];
 
         deque<int> dq;
-        dq.push_back(p[0]);
+        dq.push_back(v[0]);
 
         for (int i = 1; i < n; i++)
         {
-            if (p[i] < dq.front())
-                dq.push_front(p[i]);
+            if (v[i] < dq.front())
+                dq.push_front(v[i]);
             else
-                dq.push_back(p[i]);
+                dq.push_back(v[i]);
         }
 
         for (auto x : dq)

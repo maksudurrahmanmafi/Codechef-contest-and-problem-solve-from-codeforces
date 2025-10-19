@@ -15,26 +15,26 @@ int main() {
         cin >> s;
 
         ll total = 0;
-        vector<ll> gain;
+        vector<ll> v;
 
         for (int i = 0; i < n; i++) {
             // If looking left, current = i, best = n-1-i
             // If looking right, current = n-1-i, best = i
             if (s[i] == 'L') {
                 total += i;
-                gain.push_back((n - 1 - i) - i);
+                v.push_back((n - 1 - i) - i);
             } else {
                 total += (n - 1 - i);
-                gain.push_back(i - (n - 1 - i));
+                v.push_back(i - (n - 1 - i));
             }
         }
 
         // Sort by biggest improvement first
-        sort(gain.rbegin(), gain.rend());
+        sort(v.rbegin(), v.rend());
 
         ll cur = total;
         for (int i = 0; i < n; i++) {
-            if (gain[i] > 0) cur += gain[i];
+            if (v[i] > 0) cur += v[i];
             cout << cur << " ";
         }
         cout << "\n";
