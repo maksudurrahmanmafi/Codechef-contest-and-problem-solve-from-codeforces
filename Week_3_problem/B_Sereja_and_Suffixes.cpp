@@ -13,7 +13,7 @@ int main() {
         st.insert(v[i]);
         cnt[i] = st.size();
     }
-    for(int i =1;i<=n;i++){
+    while(m--){
         int pos;
         cin>>pos;
         cout<<cnt[pos]<<'\n';
