@@ -12,9 +12,9 @@ int main() {
         cin >> n;
         int x =n;
 
-        cout << 2 << '\n'; // final smallest number always 2 for n >= 2
+        cout << 2 << '\n'; 
 
-        // Always pair largest with next smaller greedily
+       
         for (int i = n-1; i >= 1; i--) {
             cout << i << " " << x << '\n';
             x = (x + i + 1) / 2;

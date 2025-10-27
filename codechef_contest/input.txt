@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n;
+    cin >> n;
+    vector<long long> cards(n);
+
+    for (int i = 0; i < n; i++) {
+        cin >> cards[i];
+    }
+
+    // Max-heap for bonus cards
+    priority_queue<long long> bonus;
+
+    long long totalPower = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (cards[i] == 0) {
+            // Hero card
+            if (!bonus.empty()) {
+                totalPower += bonus.top();
+                bonus.pop(); // used bonus discarded
+            }
+        } else {
+            // Bonus card
+            bonus.push(cards[i]);
+        }
+    }
+
+    cout << totalPower << "\n";
+    return 0;
+}
